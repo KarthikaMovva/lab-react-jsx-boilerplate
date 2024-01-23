@@ -25,6 +25,17 @@ const imageData = ()=>{
 
 function App() {
   // code here
+  let set = imageData()
+  return(
+    <div>
+      <h1 className='title'>Kalvium gallary</h1>
+      <div className='Table'>
+       {set.map(function(e,i){
+        return <img src={e.img} className='Picture' />
+       })}
+      </div>
+    </div>
+  )
 }
 
 export default App;

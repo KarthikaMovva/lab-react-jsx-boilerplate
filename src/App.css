@@ -1,1 +1,11 @@
-/* add your styles here */
+.Table{
+ display: grid;
+ grid-template-columns: auto auto;
+ gap: 20px;
+}
+.Picture{
+    width: 100%;
+}
+.title{
+    text-align: center;
+}
