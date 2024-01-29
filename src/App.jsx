@@ -1,29 +1,8 @@
 import './App.css';
-import elephant from "./images/elephant.jpeg";
+import imageData from './Components/Datacomponent';
 
-const imageData = ()=>{
-  let data = [
-    {
-      id:1,
-      img:elephant
-    },
-    {
-      id:2,
-      img:elephant
-    },
-    {
-      id:3,
-      img:elephant
-    },
-    {
-      id:4,
-      img:elephant
-    }
-  ]
-  return data;
-}
 
-function App() {
+function App(props) {
   // code here
   let set = imageData()
   return(
@@ -31,7 +10,7 @@ function App() {
       <h1 className='title'>Kalvium gallary</h1>
       <div className='Table'>
        {set.map(function(e,i){
-        return <img src={e.img} className='Picture' />
+        return <img src={e.img} className='Picture' key={e.id}/>
        })}
       </div>
     </div>
