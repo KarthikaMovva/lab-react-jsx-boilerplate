@@ -1,4 +1,7 @@
 import elephant from "../images/elephant.jpeg";
+// import App from "../App"
+import AppClass from "../AppClass"
+import { Component } from "react";
 const imageData = ()=>{
     let data = [
       {
@@ -19,5 +22,20 @@ const imageData = ()=>{
       }
     ]
     return data;
+}
+class Importcomponent extends Component{
+  constructor(){
+    super()
   }
-  export default imageData
+  render(){
+  const list=imageData()
+  return (<div>
+    {/* <App imported={list}/> */}
+    <AppClass imported={list}/>
+  </div>)
+  }
+}
+
+
+
+  export default Importcomponent;
